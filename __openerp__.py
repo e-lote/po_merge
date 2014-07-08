@@ -32,7 +32,7 @@
     'init_xml': [],
     'data': [
 	'po_view.xml',
-	'purchase_view.xml',
+	# 'purchase_view.xml',
     ],
     'demo_xml': [
     ],
