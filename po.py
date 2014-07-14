@@ -142,7 +142,7 @@ class po_merge(osv.osv_memory):
 			# import pdb;pdb.set_trace()
 			if product_supplier_id:
 				product_supplier = self.pool.get('product.supplierinfo').browse(cr,uid,product_supplier_id)[0]
-				if product_supplier.min_qty > list_product['qty']:
+				if product_supplier.minimum_production > list_product['qty']:
 					insert_product = False
 			if insert_product:	
 				vals_order_line = {
