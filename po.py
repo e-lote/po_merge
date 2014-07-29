@@ -42,7 +42,7 @@ class purchase_order(osv.osv):
         	('consolidated', 'Consolidated'),
 	        ('cancel', 'Cancelled'),
 		('in_transit','In Transit'),
-		('done','Done'),
+		('delivered','Delivered'),
 		('not_valid','Not Valid'),
 	    ]
 
