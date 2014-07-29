@@ -119,11 +119,13 @@ class po_merge(osv.osv_memory):
 				for list_product in list_products:
 					if list_product['product_id'] == line.product_id.id:
 						list_products[index]['qty'] += line.product_qty
+						list_products[index]['boxes'] += line.boxes
 						add_item = False
 					index += 1	
 				if add_item:
 					vals_product = {
 						'product_id': line.product_id.id,
+						'boxes': line.boxes,
 						'qty': line.product_qty,
 						'price_unit': line.product_id.list_price,
 						'product_uom': line.product_id.uom_id.id,
@@ -154,6 +156,7 @@ class po_merge(osv.osv_memory):
 					'name': list_product['name'],
 					'product_uom': list_product['product_uom'],
 					'product_qty': list_product['qty'],
+					'boxes': list_product['boxes'],
 					'price_unit': list_product['price_unit'],
 					'date_planned': list_product['date_planned'],
 					}
